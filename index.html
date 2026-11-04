@@ -80,6 +80,19 @@
     margin: 12px 0;
     font-size: 14px;
   }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid #e0d6bd;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f3edda; color: #204d3a; white-space: nowrap; }
   .divider {
     margin: 48px 0 32px;
     height: 1px;
@@ -111,134 +124,183 @@
 
     <div id="lang-zh">
       <h1>光迹Lumi 隐私政策</h1>
-      <p class="subtitle">更新日期：2026年10月18日</p>
+      <p class="subtitle">更新日期：2026年11月4日 · 生效日期：2026年11月4日</p>
 
-      <p>光迹Lumi（以下简称"本应用"）由个人开发者（以下简称"我们"）开发。我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。请您在使用本应用前仔细阅读本隐私政策。</p>
+      <p>光迹Lumi（以下简称"本应用"）是由王祺（以下简称"我们"）为您提供的离线私人刊物应用。我们深知个人信息对您的重要性，将按照法律法规要求并遵循正当、必要的原则，为您的个人信息提供安全保护。请您在使用本应用前仔细阅读并充分理解本政策。</p>
 
-      <h2>一、我们收集的信息</h2>
-
-      <h2 style="font-size:16px">1. 照片及照片中的拍摄信息</h2>
-      <p>当您使用<strong>装订创作</strong>功能并授权照片权限后，本应用会在<strong>您主动选择</strong>的照片范围内访问照片，并读取照片自带的拍摄信息（拍摄时间、GPS 地点等 EXIF 数据），用于：</p>
-      <ul>
-        <li>按时间与地点整理您的照片，生成可翻阅的私人刊物</li>
-        <li>根据拍摄地点生成您的旅行足迹地图</li>
-      </ul>
       <div class="highlight">
-        <strong>重要说明：</strong><br>
-        • 照片与拍摄信息<strong>仅存储在您的设备本地</strong>，我们<strong>不会上传、不会存储在服务器</strong><br>
-        • 我们<strong>不会</strong>在后台持续追踪您的位置；位置信息仅来自您所选照片自带的拍摄记录<br>
-        • 您可以随时在系统设置中关闭照片权限，关闭后不影响已生成内容的查看
+        <strong>版本变更说明</strong><br>
+        V1.1（2026-11-04）：为适配 HarmonyOS 及其他平台上架，整理并扩充全文口径——新增"设备权限调用"清单、"第三方共享"与"第三方 SDK"说明、"管理您的个人信息"的具体路径，其余条款无实质变更。
       </div>
 
-      <h2 style="font-size:16px">2. 手记文字与语音</h2>
-      <p>您在应用内记录的文字手记与语音，<strong>仅保存在您设备的本地存储中</strong>。使用"语音转文字"时，音频会提交至 Apple 系统语音识别服务进行转写（处理方式遵循 Apple 隐私政策），转写生成的文字仅保存在您的设备本地。我们无法访问这些数据，卸载应用后数据将被彻底删除。</p>
-
-      <h2>二、我们如何使用信息</h2>
-      <p>本应用是<strong>离线优先</strong>的私人刊物工具：</p>
+      <h2>摘要</h2>
+      <p>本应用把照片与手记装订成私人刊物、记录旅行足迹，是<strong>离线优先</strong>的工具：</p>
       <ul>
-        <li>所有刊物、照片、手记与足迹数据<strong>只在本地处理和存储</strong></li>
-        <li>本应用<strong>没有账号系统</strong>，无需注册登录</li>
-        <li>我们<strong>不收集</strong>您的姓名、邮箱、电话等个人身份信息</li>
-        <li>本应用<strong>不含广告、不含任何统计分析组件</strong></li>
+        <li>本应用<strong>不收集您的个人信息</strong>：无账号系统、无需注册登录，我们不收集姓名、邮箱、电话等任何个人身份信息；</li>
+        <li>您的全部数据（刊物、照片、手记、语音、足迹）<strong>仅保存在您的设备本地</strong>，我们没有服务器，不涉及数据跨境；</li>
+        <li>仅有的两种对外请求都由您<strong>主动发起</strong>：地名显示（系统地理编码服务）与可选的 AI 文字整理（您自行配置的服务商）；</li>
+        <li>卸载应用即可<strong>彻底删除</strong>全部数据。</li>
       </ul>
 
-      <h2>三、第三方服务</h2>
-      <p>在以下情形中，本应用会向您主动选择的服务发起网络请求：</p>
+      <h2>一、我们如何收集和使用您的个人信息</h2>
+      <p><strong>我们不收集您的个人信息。</strong>本应用不包含账号注册、登录、统计分析和广告组件，不申请通讯录、精准位置、通讯录等与核心功能无关的权限。</p>
+
+      <h2 style="font-size:16px">1.1 基本功能与附加功能</h2>
+      <table>
+        <tr><th>功能</th><th>涉及的信息</th><th>使用目的</th></tr>
+        <tr>
+          <td>装订创作（基本功能）</td>
+          <td>您主动选择的照片及其自带的拍摄信息（拍摄时间、地点等 EXIF 数据）；您输入的手记文字</td>
+          <td>按时间与地点整理照片，生成可翻阅的图文期刊</td>
+        </tr>
+        <tr>
+          <td>足迹地图（基本功能）</td>
+          <td>所选照片自带的拍摄地点（EXIF 中的 GPS 记录）</td>
+          <td>将拍摄地点连成旅行足迹地图</td>
+        </tr>
+        <tr>
+          <td>语音手记（基本功能）</td>
+          <td>您主动录制的语音</td>
+          <td>随手记录想法；录音仅保存在设备本地</td>
+        </tr>
+        <tr>
+          <td>AI 文字整理（可选附加功能）</td>
+          <td>您预览确认后发送的手记文字与照片缩略图</td>
+          <td>根据您选择的照片与手记生成刊物配文</td>
+        </tr>
+      </table>
+      <div class="highlight">
+        <strong>重要说明：</strong>
+        <ul style="margin:6px 0 0">
+          <li>上述信息全部<strong>保存在您的设备本地</strong>，我们不上传、不存储在任何服务器；</li>
+          <li>我们<strong>不在后台追踪您的位置</strong>，位置信息仅来自您所选照片自带的拍摄记录；</li>
+          <li>您可以随时在应用底部标签「设置」页选择仅使用基本功能；拒绝照片或麦克风权限仅影响对应功能，不影响应用的其他功能。</li>
+        </ul>
+      </div>
+
+      <h2 style="font-size:16px">1.2 个性化推荐说明</h2>
+      <p>本应用<strong>不涉及</strong>个性化推荐服务，无广告、无推荐算法，无需关闭路径。</p>
+
+      <h2>二、设备权限调用</h2>
+      <table>
+        <tr><th>权限</th><th>对应使用场景</th><th>是否可拒绝</th></tr>
+        <tr>
+          <td>照片 / 媒体库与存储位置（HarmonyOS：MEDIA_LOCATION；iOS：照片）</td>
+          <td>仅在您使用装订创作、主动选择照片时访问所选照片及其拍摄信息</td>
+          <td>可以。拒绝后无法选照片装订，其余功能不受影响</td>
+        </tr>
+        <tr>
+          <td>麦克风（HarmonyOS 与 iOS 一致：MICROPHONE）</td>
+          <td>仅在您录制语音手记时开启</td>
+          <td>可以。拒绝后无法录制语音，其余功能不受影响</td>
+        </tr>
+      </table>
+      <p>权限的开启与关闭：HarmonyOS 可在「设置 → 应用和服务 → 应用管理 → 光迹Lumi → 权限」中管理；iOS 可在「设置 → 隐私与安全性」中管理。</p>
+
+      <h2>三、对未成年人的保护</h2>
+      <p>本应用不面向儿童收集任何个人信息，也不提供任何面向儿童的功能或服务。若您是未满 14 周岁的未成年人，请在监护人陪同下阅读本政策并在征得监护人同意后使用本应用。</p>
+
+      <h2>四、与第三方共享</h2>
+      <p>本应用<strong>不会</strong>向任何第三方出售、出租或公开您的个人信息。唯一涉及第三方的情形为您主动配置、主动触发的 AI 文字整理功能：</p>
+      <table>
+        <tr><th>项目</th><th>说明</th></tr>
+        <tr><td>第三方</td><td>用户自行配置的 AI 服务商</td></tr>
+        <tr><td>共享信息名称</td><td>您预览确认过的手记文字与照片缩略图</td></tr>
+        <tr><td>使用目的</td><td>根据您选择的照片与手记生成刊物配文</td></tr>
+        <tr><td>使用场景</td><td>仅当您在装订创作中主动发起 AI 配文并确认发送时</td></tr>
+        <tr><td>共享方式</td><td>通过您配置的 API 密钥从设备直接请求该服务商</td></tr>
+        <tr><td>处理规则</td><td>按该服务商的隐私政策处理；API 密钥仅保存在您的设备本地；开发者无法访问请求内容；原始照片不会上传保存</td></tr>
+      </table>
+      <p>此外，将照片的拍摄坐标转换为地名时，仅向设备系统的地理编码服务发送坐标，不含任何身份信息。除上述情形外，本应用不与任何第三方传输您的数据。</p>
+
+      <h2>五、第三方 SDK</h2>
+      <table>
+        <tr><th>项目</th><th>说明</th></tr>
+        <tr><td>名称</td><td>Capacitor（混合应用运行框架）</td></tr>
+        <tr><td>提供方</td><td>Ionic / Capacitor 开源项目</td></tr>
+        <tr><td>使用目的</td><td>作为应用的本地 WebView 运行容器</td></tr>
+        <tr><td>使用场景</td><td>应用运行全程，本地使用</td></tr>
+        <tr><td>收集方式</td><td>不适用，该框架本身不收集任何信息</td></tr>
+        <tr><td>收集个人信息类型</td><td>无</td></tr>
+        <tr><td>处理原则</td><td><a href="https://github.com/ionic-team/capacitor/blob/main/LICENSE" target="_blank" rel="noopener">MIT 开源许可证</a>随应用打包分发，无独立的数据收集与处理行为</td></tr>
+      </table>
+
+      <h2>六、管理您的个人信息</h2>
+      <p>您的数据全部在设备本地，您随时可以：</p>
       <ul>
-        <li><strong>地名显示</strong>：将照片的拍摄坐标转换为地名时，会向 Apple 提供的系统地理编码服务发起请求，仅包含坐标，不包含您的身份信息</li>
-        <li><strong>AI 文字整理（可选）</strong>：装订创作时的 AI 辅助功能默认关闭。仅当您自行配置 AI 服务商与 API 密钥并主动发起时，才会发送您<strong>预览确认过的文字与缩略图</strong>；请求使用您自己的密钥直达您选择的服务商，<strong>原始照片不会上传保存</strong>，我们也无法访问这些请求</li>
+        <li><strong>查询与访问</strong>：在应用底部标签「设置」页及各刊物列表中查看全部数据；</li>
+        <li><strong>更正</strong>：在应用底部标签「设置」页修改刊物、手记内容与相关设置；</li>
+        <li><strong>删除</strong>：在应用底部标签「设置」页删除刊物、手记或语音录音（涉及照片及拍摄信息、文字手记内容、语音录音与转写文字、个人信息处理设置）；</li>
+        <li><strong>撤销同意</strong>：在应用底部标签「设置」页或系统设置中关闭照片、麦克风权限，即撤回对相应信息处理的授权；</li>
+        <li><strong>注销</strong>：本应用无账号体系，卸载应用即完成注销，全部数据将被彻底删除。</li>
       </ul>
-      <p>除上述情形外，本应用不与任何第三方传输您的数据。</p>
 
-      <h2>四、信息共享</h2>
-      <p>我们<strong>不会</strong>向任何第三方出售、出租或共享您的个人信息。</p>
-
-      <h2>五、数据安全</h2>
+      <h2>七、信息的存储</h2>
       <ul>
-        <li>所有数据存储于您的设备本地，受 iOS 系统沙盒保护</li>
-        <li>我们没有服务器，因此不存在服务器数据泄露风险</li>
+        <li><strong>存储地点</strong>：不涉及，本应用无服务器，信息仅保存在您的设备本地；</li>
+        <li><strong>存储期限</strong>：所有数据保存在您的设备本地，直至您自行删除或卸载应用；</li>
+        <li><strong>跨境传输</strong>：不涉及，本应用不向境外传输任何数据。</li>
       </ul>
 
-      <h2>六、您的权利</h2>
-      <ul>
-        <li><strong>访问和删除</strong>：您可随时在应用内查看和删除您的刊物、照片与手记；卸载应用即可彻底删除全部数据</li>
-        <li><strong>权限管理</strong>：您可在 iOS「设置 → 隐私与安全性」中随时开启或关闭本应用的照片、麦克风等权限</li>
-      </ul>
+      <h2>八、隐私政策的更新</h2>
+      <p>我们可能适时更新本政策。更新后会在本页面公布并注明更新日期；重大变更时会以应用内显著方式提示。</p>
 
-      <h2>七、未成年人保护</h2>
-      <p>本应用不面向未成年人收集任何个人信息。</p>
-
-      <h2>八、隐私政策更新</h2>
-      <p>我们可能会适时更新本政策。更新后会在本页面公布，重大变更时会以显著方式提示。</p>
-
-      <h2>九、联系我们</h2>
-      <p>如您对本隐私政策有任何疑问、意见或建议，请联系我们：</p>
+      <h2>九、如何联系我们</h2>
+      <p>如您对本政策有任何疑问、意见或建议，或需要行使上述权利，请联系我们，我们将在收到请求后尽快回复：</p>
       <p>邮箱：<strong>jameshys@outlook.com</strong></p>
+
+      <h2>十、生效日期</h2>
+      <p>本政策自 <strong>2026 年 11 月 4 日</strong> 起生效。相关约定另见<a href="agreement.html">《光迹Lumi用户协议》</a>。</p>
     </div>
 
     <div class="divider" id="lang-divider"></div>
 
     <div id="lang-en" class="en">
       <h1>Lumi Privacy Policy</h1>
-      <p class="subtitle">Last Updated: October 18, 2026</p>
+      <p class="subtitle">Last Updated &amp; Effective: November 4, 2026</p>
 
-      <p>光迹Lumi ("the app") is developed by an individual developer ("we"). We deeply value your privacy. Please read this policy carefully before using the app.</p>
+      <p>光迹Lumi ("the app") is an offline-first personal journal app provided by Qi Wang ("we"). Please read this policy carefully before using the app.</p>
 
-      <h2>1. Information We Collect</h2>
-
-      <p><strong>Photos and photo capture metadata</strong> — When you use the <strong>bookbinding</strong> feature and grant photo permission, the app accesses only the photos <strong>you actively select</strong>, and reads their embedded capture information (shooting time, GPS location and other EXIF data) to:</p>
+      <h2>Summary</h2>
       <ul>
-        <li>Organize your photos by time and place into a browsable personal journal</li>
-        <li>Generate your travel footprint map from shooting locations</li>
-      </ul>
-      <div class="highlight">
-        <strong>Important:</strong><br>
-        • Photos and capture metadata are stored <strong>locally on your device only</strong> — we never upload them to any server<br>
-        • We do <strong>not</strong> track your location in the background; location comes only from the capture records embedded in the photos you select<br>
-        • You may revoke photo permission at any time; viewing already-created journals is not affected
-      </div>
-
-      <p><strong>Notes and voice memos</strong> — Text notes and voice recordings you create in the app are stored <strong>only in the local storage on your device</strong>. When you use speech-to-text, audio is submitted to Apple's system speech recognition service for transcription (processed per Apple's Privacy Policy); the transcribed text is stored only on your device. We cannot access this data. Uninstalling the app permanently deletes it.</p>
-
-      <h2>2. How We Use Information</h2>
-      <ul>
-        <li>This app is an <strong>offline-first</strong> personal journal: all journals, photos, notes and footprint data are processed and stored <strong>locally only</strong></li>
-        <li>No account system — no sign-up or login required</li>
-        <li>We do <strong>not</strong> collect names, emails, phone numbers, or any other personal identifiers</li>
-        <li>The app contains <strong>no ads and no analytics components</strong></li>
+        <li>The app <strong>does not collect personal information</strong>: no account, no sign-up, no analytics, no ads</li>
+        <li>All your data (journals, photos, notes, voice memos, footprints) lives <strong>only on your device</strong>; we operate no servers and no cross-border transfers occur</li>
+        <li>The only outbound requests are <strong>user-initiated</strong>: place-name display (system geocoding) and the optional AI text assistance (your own configured provider)</li>
+        <li>Uninstalling the app <strong>permanently erases</strong> all data</li>
       </ul>
 
-      <h2>3. Third-Party Services</h2>
-      <p>The app sends network requests to services you actively choose only in the following cases:</p>
+      <h2>1. Information We Collect and Use</h2>
+      <p><strong>We do not collect personal information.</strong> When you use bookbinding, the app reads only the photos <strong>you actively select</strong>, including their embedded capture information (time, GPS), to organize journals and build your footprint map. Voice memos you record are stored locally only. The optional AI feature sends the <strong>text and thumbnails you previewed and confirmed</strong> — using your own API key — directly to the provider you chose; original photos are never uploaded, and we have no access to these requests. Place-name display sends coordinates only to the device's system geocoding service.</p>
+
+      <h2>2. Device Permissions</h2>
       <ul>
-        <li><strong>Place-name display</strong>: converting photo capture coordinates into place names uses Apple's system geocoding service; requests contain coordinates only, never your identity</li>
-        <li><strong>AI text assistance (optional)</strong>: the AI feature is off by default. Only when you configure your own AI provider and API key and actively invoke it will the app send the <strong>text and thumbnails you previewed and confirmed</strong>; requests use your own key and go directly to the provider you chose. <strong>Original photos are never uploaded or stored</strong>, and we have no access to these requests</li>
-      </ul>
-      <p>Beyond the above, the app never transmits your data to any third party.</p>
-
-      <h2>4. Information Sharing</h2>
-      <p>We will <strong>never</strong> sell, rent, or share your personal information with any third party.</p>
-
-      <h2>5. Data Security</h2>
-      <p>All data lives in your device's local storage, protected by the iOS sandbox. We operate no servers, so there is no server-side data-breach risk.</p>
-
-      <h2>6. Your Rights</h2>
-      <ul>
-        <li><strong>Access &amp; deletion</strong>: View and delete your journals, photos and notes anytime in the app; uninstalling the app permanently erases everything</li>
-        <li><strong>Permission control</strong>: Toggle photo, microphone and other permissions anytime in iOS "Settings → Privacy &amp; Security"</li>
+        <li><strong>Photos / media library</strong> — used only when you actively select photos for binding; denial does not affect other features</li>
+        <li><strong>Microphone</strong> — used only when recording a voice memo; denial does not affect other features</li>
       </ul>
 
-      <h2>7. Children's Privacy</h2>
-      <p>The app does not collect any personal information from children.</p>
+      <h2>3. Children</h2>
+      <p>The app does not collect any personal information from children and offers no child-directed features.</p>
+
+      <h2>4. Third-Party Sharing</h2>
+      <p>We never sell, rent, or share your personal information. The only third-party case is the user-configured, user-triggered AI text assistance described above, processed under that provider's privacy policy.</p>
+
+      <h2>5. Third-Party SDK</h2>
+      <p>Capacitor (by the Ionic/Capacitor open-source project) runs as the app's local WebView container. It <strong>collects nothing</strong>; it is distributed under the <a href="https://github.com/ionic-team/capacitor/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.</p>
+
+      <h2>6. Managing Your Information</h2>
+      <p>View, correct, and delete your data anytime on the app's <strong>Settings</strong> tab; revoke consent by disabling permissions in system settings; uninstalling the app erases everything (no account exists).</p>
+
+      <h2>7. Storage</h2>
+      <p>All data is stored locally on your device until you delete it or uninstall the app. No servers, no cross-border transfers.</p>
 
       <h2>8. Changes to This Policy</h2>
-      <p>We may update this policy from time to time. Updates will be published on this page.</p>
+      <p>Updates are published on this page with a revision date.</p>
 
       <h2>9. Contact Us</h2>
       <p>Email: <strong>jameshys@outlook.com</strong></p>
     </div>
 
-    <footer>© 2026 光迹Lumi</footer>
+    <footer>© 2026 光迹Lumi · <a href="agreement.html">用户协议</a> · <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">渝ICP备2026027225号-1</a></footer>
   </div>
 </div>
 
